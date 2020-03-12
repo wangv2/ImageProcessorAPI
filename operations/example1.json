@@ -1,0 +1,11 @@
+
+{
+	"flip": "horizontal",
+	"rotate": 30,
+	"gray":"true",
+	"resize":[200, 300],
+	"thumbnail":"false",
+	"rotateLeft":"true",
+	"rotateRight":"false",
+	"image": "[base64 encoded image string]"
+}
