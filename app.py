@@ -24,10 +24,10 @@ def img():
     request_data = request.json                 # get client's request data
     print(request_data)
 
-    encoded_img = request_data['image']         # decode image
+    encoded_img = request_data['image']
     decoded_img = base64.b64decode(encoded_img)
 
-    img_handler = open(filename, "wb+")         # write image to file
+    img_handler = open(filename, "wb+")
     img_handler.write(decoded_img)
     img_handler.close()
 
@@ -59,10 +59,10 @@ def process_img(operations, fname):
     if ('thumbnail' in operations) and (operations['thumbnail'] == 'true'):
         img = thumbnail(img)
 
-    if 'rotateLeft' in operations:             #TODO: add check to see if true
+    if 'rotateLeft' in operations and (operations['rotateLeft'] == 'true'):
         img = rotate_left(img)
 
-    if 'rotateRight' in operations:           #TODO: add check to see if true
+    if 'rotateRight' in operations and (operations['rotateRight'] == 'true'):
         img = rotate_right(img)
 
     img.save(final_fname)
@@ -93,6 +93,7 @@ def gray(img, op):
         return img
 
 
+# assuming that dimensions are positive ints
 def resize(img, op):
 
     dims = (op[0], op[1])
