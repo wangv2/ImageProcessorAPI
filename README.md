@@ -8,6 +8,20 @@ source bin/activate
 **Start app.py**<br />
 python3 app.py 
 
+**API Spec**<br />
+POST /localhost:5000/img <br />
+
+{<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"flip": "",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"rotate": "",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"gray":"",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"resize":[,],<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"thumbnail":"",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"rotateLeft":"",<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"rotateRight":""<br />
+&nbsp;&nbsp;&nbsp;&nbsp;"image": "[base64 encoded image]"<br />
+}
+
 **Assignment Spec**
 
 Given the following specification, design the overall architecture and APIs necessary to support this application. You will be responsible for submitting architectural models, API specifications (as interface definitions, swagger, or any other reasonable format such that a developer would be able to figure out how code against your product's API).<br />
